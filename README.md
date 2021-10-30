@@ -1,5 +1,7 @@
-# lotr-vue-cli
+# Lord of the Rings with VUE.js CLI
+Front-end for LOTR REST API
 
+# Vue Info
 ## Project setup
 ```
 npm install
