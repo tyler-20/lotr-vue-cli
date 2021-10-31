@@ -1,12 +1,41 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Home</router-link>
+      <router-link to="/movies">Movies</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+  import axios from "axios";
+
+  export default {
+    name: 'app',
+    created: function() {
+        let url1 = "https://the-one-api.dev/v2/movie";
+        let url2 = "https://the-one-api.dev/v2/character"
+        axios.get(url1, {
+          headers: {
+            authorization: "Bearer 3w1FDe-ShtM-xvbg-o6h" //PUBLIC TOKEN, ACCEPTABLE FOR CLIENT SIDE
+          }
+        })
+          .then(response => {
+            this.$root.$data.movies = response.data;
+          }).catch(error => {
+            console.log(error);
+          });
+        axios.get(url2, {
+          headers: {
+            authorization: "Bearer 3w1FDe-ShtM-xvbg-o6h"
+          }
+        }).then(response => {
+          this.$root.$data.books = response.data;
+        })
+      }
+  }
+</script>
 
 <style>
 #app {
