@@ -31,7 +31,6 @@ export default {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        height: 750px;
     }
     .character_name {
         text-decoration: none;

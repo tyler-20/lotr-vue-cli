@@ -9,12 +9,14 @@
       </div>
     </div>
     <router-view/>
+    <div class="footer">
+      <a href="https://github.com/tyler-20/lotr-vue-cli">GitHub Link</a>
+    </div>
   </div>
 </template>
 
 <script>
   import axios from "axios";
-
   export default {
     name: 'app',
     created: function() {
@@ -89,11 +91,21 @@
   background-color: inherit;
   align-items: center;
 }
-
 #ring {
   display: flex;
   width: 15%;
   max-width: 350px;
 }
+.footer {
 
+  margin-top: 250px;
+  border-top: #ac792c;
+  border-top-style: solid;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: right;
+  padding: 10px;
+  padding-right: 25px;
+  font-size: large;
+}
 </style>
