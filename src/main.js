@@ -6,7 +6,8 @@ Vue.config.productionTip = false
 
 let data = {
   movies: [],
-  books: [],
+  characters: [],
+  saved: [],
 }
 
 new Vue({

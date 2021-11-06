@@ -1,7 +1,8 @@
 <template>
     <div class="movie_layout">
+        <h2>Search for quotes by movie!</h2>
         <div class="my_list">
-            <router-link v-for="movie in movies" :key="movie._id" :to="{name: 'Quotes', params: {id: movie._id, isMovie: true, name: movie.name}}">{{movie.name}}</router-link>
+            <router-link class="movie_name" v-for="movie in movies.filter(movie => (movie.name === 'The Two Towers ' || movie.name === 'The Fellowship of the Ring' || movie.name == 'The Return of the King'))" :key="movie._id" :to="{name: 'Quotes', params: {id: movie._id, isMovie: true, name: movie.name}}">{{movie.name}}</router-link>
         </div>
     </div>
 </template>
@@ -17,24 +18,22 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-    margin: 40px 0 0;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-li {
-    display: inline-block;
-    margin: 0 10px;
-}
-a {
-    color: #42b983;
-}
-.my_list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 750px;
-}
+
+    .movie_name {
+        color: #61996c;
+        font-size: x-large;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .movie_name:any-link {
+        color: #61996c;
+        text-decoration: none;
+    }
+    .my_list {
+        display: flex;
+        flex-direction: column;
+    }
+    h2 {
+        font-size: xx-large;
+    }
 </style>

@@ -14,9 +14,13 @@
             QuoteLayout
         },
         computed: {
-            getIsMovie() {return this.$route.params.isMovie;},
+            getIsMovie() {return Boolean(this.$route.params.isMovie);},
             getID() {return this.$route.params.id;},
             name() {return this.$route.params.name;}
         }
     }
 </script>
+
+<style scoped>
+    
+</style>

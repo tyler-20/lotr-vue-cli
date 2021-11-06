@@ -1,6 +1,5 @@
 <template>
     <div class="movies">
-        <h2>The spot for movies</h2>
         <MovieLayout :movies="movies" />
     </div>
 </template>
@@ -22,3 +21,7 @@
         }
     }
 </script>
+
+<style scoped>
+    
+</style>
